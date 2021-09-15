@@ -1,21 +1,33 @@
-# Communication Server
+# TCP server used as part of uni team-project
+
+> Basically, the project was a modular game where bots compete against each other in simple team matches.
+> Each team developed a server (this repo), a Game Master (a client handling game logic), and Agents (bots playing the game).
+> 
+> Then a tournament would be played to tell which team won. There were rounds where each team would provide their modules
+> and if it handled games correctly, points scored by teams of bots would be summed up to determine the ultimate winner.
+> 
+> Pretty complicated.
+
+## Features
+
+- Communication with other modules over **TCP**
+- Logs (winston)
+    - colorful in tty (chalk)
+    - as json in log file
+- [Tests](./test) (mocha)
+- Implemented as a Finite State Machine
+- *Probably* extendable to support other usecases
 
 ## Usage
 
-- `npm install` to install dependencies.
-- `npm test` to run tests.
-- `npm start` to launch the server.
-- `npm run debug` to launch the server in debug mode.
-- Extra: `ncat localhost <port>` - launches dumb netcat client.
+- `npm install` - install dependencies.
+- `npm test` - run tests.
+- `npm start` - launch the server.
+- `npm run debug` - launch the server in debug mode.
+- Extra: `ncat localhost <port>` - launch dumb netcat client.
 
 ### Config
 
-- `agentPort` - port, przez który łączą się gracze.
-- `masterPort` - port, przez który łączy się GM.
-- `maxConnections` - maksymalna liczba jednocześnie połączonych agentów.
-
-## Links
-
-- [Jakiś przykładowy klient w C#](https://jckjaer.dk/2016/07/06/sending-utf-8-json-through-tcpclient-in-c/)
-- [Dokumentacja modułu `net`](https://nodejs.org/api/net.html)
-- [mocha](https://mochajs.org/#run-cycle-overview)
+- `agentPort` - port used by **players**.
+- `masterPort` - port used by **GameMaster**.
+- `maxConnections` - max simultaneous **agent connections**.
