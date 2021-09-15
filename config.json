@@ -1,0 +1,192 @@
+{
+  "agentPort": 4000,
+  "masterPort": 5000,
+  "maxConnections": 6,
+
+  "messageRequiredProperties": ["messageID"],
+
+  "messages": {
+    "agent1": {
+      "code": 1,
+      "type": "agent",
+      "payloadRequired": false,
+      "details": "Zapytanie czy trzymany fragment jest fikcyjny"
+    },
+    "agent2": {
+      "code": 2,
+      "type": "agent",
+      "payloadRequired": false,
+      "details": "Zapytanie o zniszczenie fragmentu"
+    },
+    "agent3": {
+      "code": 3,
+      "type": "agent",
+      "payloadRequired": false,
+      "details": "Zapytanie o akcje odkrycia"
+    },
+    "agent4": {
+      "code": 4,
+      "type": "agent",
+      "payloadRequired": true,
+      "details": "Odpowiedz na wymiane informacji"
+    },
+    "agent5": {
+      "code": 5,
+      "type": "agent",
+      "payloadRequired": true,
+      "details": "Zapytanie o wymiane informacji"
+    },
+    "agent6": {
+      "code": 6,
+      "type": "agent",
+      "payloadRequired": true,
+      "details": "Zapytanie o dolaczenie do rozgrywki"
+    },
+    "agent7": {
+      "code": 7,
+      "type": "agent",
+      "payloadRequired": true,
+      "details": "Zapytanie o ruch"
+    },
+    "agent8": {
+      "code": 8,
+      "type": "agent",
+      "payloadRequired": false,
+      "details": "Zapytanie o podniesienie fragmentu"
+    },
+    "agent9": {
+      "code": 9,
+      "type": "agent",
+      "payloadRequired": false,
+      "details": "Zapytanie o polozenie fragmentu"
+    },
+
+    "gm101": {
+      "code": 101,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Odpowiedz na sprawdzenie fikcyjnosci"
+    },
+    "gm102": {
+      "code": 102,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Odpowiedz na prosbe o zniszczenie fragmentu"
+    },
+    "gm103": {
+      "code": 103,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Odpowiedz na akcje discovery"
+    },
+    "gameEnded": {
+      "code": 104,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Wiadomosc o zakonczeniu gry"
+    },
+    "gameStarted": {
+      "code": 105,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Wiadomosc o rozpoczeciu gry"
+    },
+    "gm106": {
+      "code": 106,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Wiadomosc przekazujaca zapytanie o wymiane informacji do adresata"
+    },
+    "gm107": {
+      "code": 107,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Odpowiedz na zapytanie o dolaczenie"
+    },
+    "gm108": {
+      "code": 108,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Odpowiedz na zapytanie o ruch"
+    },
+    "gm109": {
+      "code": 109,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Odpowiedz na podniesienie kawalka"
+    },
+    "gm110": {
+      "code": 110,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Odpowiedz na polozenie kawalka"
+    },
+	"gm111": {
+      "code": 111,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Odpowiedz na wymianę informacji"
+    },
+    "gm112": {
+      "code": 112,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Potwierdzenie odpowiedzi na wymianę informacji"
+    },
+    "gm113": {
+      "code": 113,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Potwierdzenie prośby o wymianę informacji"
+    },
+
+    "allAgentsLeft": {
+      "code": 908,
+      "type": "server",
+      "payloadRequired": false,
+      "details": "Wszsyscy agenci rozlaczyli sie po koncu gry"
+    },
+    "errorBadMove": {
+      "code": 901,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Bledny ruch"
+    },
+    "err902": {
+      "code": 902,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Bledne odlozenie kawalka"
+    },
+    "err903": {
+      "code": 903,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Bledne polozenie kawalka"
+    },
+    "errorCooldownLeft": {
+      "code": 904,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Nie odczekanie kary"
+    },
+    "errorOther": {
+      "code": 905,
+      "type": "gameMaster",
+      "payloadRequired": true,
+      "details": "Niezdefiniowany blad"
+    },
+    "errorAgentLeft": {
+      "code": 906,
+      "type": "server",
+      "payloadRequired": true,
+      "details": "Agent utracił połączenie"
+    },
+    "errorGmLeft": {
+      "code": 907,
+      "type": "server",
+      "payloadRequired": true,
+      "details": "Game Master utracił połączenie"
+    }
+  }
+}
